@@ -1,16 +1,24 @@
-# asking for input from the users  
-the_height = float(input("Enter the height in cm: "))  
-the_weight = float(input("Enter the weight in kg: "))  
-# defining a function for BMI  
-the_BMI = the_weight / (the_height/100)**2  
-# printing the BMI  
-print("Your Body Mass Index is", the_BMI)  
-# using the if-elif-else conditions  
-if the_BMI <= 18.5:  
-    print("Oops! You are underweight.")  
-elif the_BMI <= 24.9:  
-    print("Awesome! You are healthy.")  
-elif the_BMI <= 29.9:  
-    the_print("Eee! You are over weight.")  
-else:  
-    print("Seesh! You are obese.")
+#BMI calculator
+height = float(input("Enter your height in feet: "))
+weight = float(input("Enter your weight in Kg: "))
+#convert feet to meters
+meters = height * 0.3048
+BMI = weight / (meters * meters)
+print("BMI Calculated is: ", BMI)
+if height == 0 or weight == 0:
+    print("Enter valid Details")
+elif BMI > 0:
+    if BMI <= 16:
+        print("You are very underweight")
+    elif BMI <= 18.5:
+        print("You are underweight")
+    elif BMI <= 25:
+        print("Congrats! You are Healthy")
+    elif BMI <= 30:
+        print("You are overweight")
+    elif BMI <= 35:
+        print("You are obesity Class I")
+    elif BMI <= 40:
+        print("You are obesity Class II ")
+    else:
+        print("You are obesity Class III")
